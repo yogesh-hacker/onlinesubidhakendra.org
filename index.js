@@ -70,12 +70,11 @@ function processRows(json) {
         b_links.className = "list-group-item list-group-item-primary"
         o_links.className = "list-group-item list-group-item-primary"
         
-        g_links.innerHTML = `<a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
-        bank_links.innerHTML = `<a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
-        p_links.innerHTML = `<a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
-        b_links.innerHTML = `<a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
-        o_links.innerHTML = `<a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
-        
+        g_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
+        bank_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
+        p_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
+        b_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
+        o_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         if(row.url_type === "government"){
             document.getElementById('g_links').appendChild(g_links);
         }
