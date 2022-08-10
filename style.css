@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.navbar-brand{
+    font-family: "Bree Serif";
+    font-size: 25px !important;
+}
+
+
+#utility{
+    position: relative;
+    background-color: green;
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.utility_content{
+    margin-top: 10px;
+    position: relative;
+    background-color: transparent;
+    height: auto;
+    height: 30px;
+}
+
+.search_bar{
+    position: absolute;
+    left: 0;
+    width: 60%;
+}
+
+.search_bar input{
+    position: static;
+    outline-offset: 0;
+    width: 100%;
+    padding-right: 0;
+}
+
+.add_link{
+    position: absolute;
+    right: 0;
+}
+
+#main_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_collapse{
+    margin: 0;
+    transition-duration: 1s;
+    padding-top: 0;
+    padding-bottom: 3rem !important;
+}
+
+
+
+#my_form{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+
+#close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+#my_form input{
+    margin: 0px;
+}
+
+.dropdown{
+    width: 100%;
+}
+
+/*Utility Classes*/
+
+h2{
+    font-family: 'Ubuntu', Sans-Serif;
+}
+
+.user_links{
+    text-decoration: none;
+    -webkit-tap-highlight-color: none;
+}
+
+#my_links li{
+    margin-bottom: 20px;
+    font-family: "Arima Madurai";
+}
+
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+.rotate.down {
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
