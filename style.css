@@ -6,6 +6,14 @@
     background-color: transparent;
 }
 
+body{
+    height: 100%;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
 .navbar-brand{
     font-family: "Bree Serif";
     font-size: 25px !important;
