@@ -48,14 +48,7 @@ function mySearch() {
 }
 
 
-
-
-
-
 /*1ObXEhvpSuwT3cYa5h7wryEMmy9zXvsrM899DB-42iFE*/
-
-
-
 
 const sheetId = '1rrjnQJ6K2JE64qIYIjFEbZPHhfMwxG0ucmMDDXDloq8';
 const base = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?`;
