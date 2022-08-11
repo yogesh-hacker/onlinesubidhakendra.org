@@ -50,12 +50,14 @@
 
 
 
-
+<div id="dom_loader">
+    <div class="loader"></div>
+</div>
 
 <div id="utility">
     <div class="utility_content">
         <div class="search_bar">
-            <input class="search form-control" type="search" placeholder="Please enter keyword to search..." aria-label="Search">
+            <input id="search_bar" class="search form-control" type="search" placeholder="Please enter keyword to search..." aria-label="Search">
         </div>
         <div class="add_link">
             <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#form_collapse" onclick="addLink()"><i class="fa-solid fa-plus"></i> Add New Link</button>
@@ -63,6 +65,8 @@
     </div>
 </div>
 <hr/>
+
+
 <div id="main_form">
     <div id="form_collapse" class="container py-0 collapse in">
         <div class="row">
@@ -96,6 +100,12 @@
         </div>
     </div>
 </div>
+
+<section id="my_search_links">
+    <ol class="list-group list-group-numbered" id="search_links">
+    </ol>
+</section>
+
     <section id="my_links">
         <div class="government_links" data-toggle="collapse" data-target="#government_links">
             <h2>Government Links <i class="fa-solid fa-angle-down"></i></h2>
@@ -141,8 +151,9 @@
     
     <div class="alert alert-info" role="alert">
         <h2>What's New---</h2>
-        <h3>Version 1.0</h3>
+        <h3>Version 2.0</h3>
         • Now you can see website logos.
+        • Search function added, UI improved more.
     </div>
     
     
