@@ -11,6 +11,44 @@ function hideit(){
 }
 
 
+const search = document.getElementById("search_bar")
+
+
+
+search.addEventListener('keyup', s=>{
+    const search_value = search.value;
+    const isfocused = document.getElementById('search_bar');
+    if (isfocused === document.activeElement){
+        document.getElementById("my_search_links").style.display = "block";
+    }
+    if (search_value === ""){
+        document.getElementById("my_search_links").style.display = "none";
+    }
+    mySearch()
+})
+
+function mySearch() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('search_bar');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("search_links");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+
 
 
 
@@ -34,6 +72,7 @@ function init() {
         .then(res => res.text())
         .then(rep => {
             //Remove additional text and extract only JSON:
+            document.getElementById("dom_loader").style.display ="none"
             const jsonData = JSON.parse(rep.substring(47).slice(0, -2));
             const colz = [];
             //Extract column labels
@@ -59,22 +98,28 @@ function init() {
 function processRows(json) {
     json.forEach((row) => {
         const keys = Object.keys(row);
+        let search_links = document.createElement("li");
         let g_links = document.createElement("li");
         let bank_links = document.createElement("li");
         let p_links = document.createElement("li");
         let b_links = document.createElement("li");
         let o_links = document.createElement("li");
+        search_links.className = "list-group-item list-group-item-primary"
         g_links.className = "list-group-item list-group-item-primary"
         bank_links.className = "list-group-item list-group-item-primary"
         p_links.className = "list-group-item list-group-item-primary"
         b_links.className = "list-group-item list-group-item-primary"
         o_links.className = "list-group-item list-group-item-primary"
         
+        search_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         g_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         bank_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         p_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         b_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
         o_links.innerHTML = `<img src='https://s2.googleusercontent.com/s2/favicons?domain=https://`+row.url+`'> </img><a class="user_links" target="_blank" href="https://`+row.url+`">`+row.url_name+`</a>`
+        
+        document.getElementById("search_links").appendChild(search_links)
+        
         if(row.url_type === "government"){
             document.getElementById('g_links').appendChild(g_links);
         }
