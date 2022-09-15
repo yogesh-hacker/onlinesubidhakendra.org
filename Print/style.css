@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#receipt_voucher {
+    width: 90%;
+    background-color: #fff;
+    height: 400px;
+    margin: 18px auto;
+    border: 2px solid black;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#print_content{
+    width: 100%;
+    height: 400px;
+}
+
+
+hr {
+    border-width: 1px;
+    border-color: black;
+    width: 100%;
+}
+
+
+#receipt_voucher h1,h3,h4 {
+    text-transform: uppercase;
+    margin: 5px 0px;
+}
+
+
+/* Media Queries */
+
+@media screen and (min-width: 900px) {
+    #receipt_voucher {
+        width: 80%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
+
+.receipt_details{
+    display: inline;
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+}
+
+.right{
+    float: right;
+}
