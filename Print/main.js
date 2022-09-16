@@ -75,7 +75,7 @@ function Print() {
     $('#receipt_voucher').printThis({
         importCSS: true,
         importStyle: true, //thrown in for extra measure
-        loadCSS: "style.css",
+        loadCSS: "https://yogesh-hacker.github.io/onlinesubidhakendra.org/Print/style.css",
         header: ''
     });
 }
