@@ -151,7 +151,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -100;
+    top: -100px;
     width: 100%;
     transition-duration: 1s;
 }
