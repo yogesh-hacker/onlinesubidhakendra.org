@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px auto;
+    margin: 10px auto 20px auto;
     border-radius: 5px;
     flex-direction: column;
     padding: 20px 0px;
