@@ -7,6 +7,7 @@
 
 body {
     font-family: "Ubuntu";
+    padding: 0px 0px 40px 0px;
     background: rgb(185,255,0);
     background: linear-gradient(90deg, rgba(185,255,0,1) 0%, rgba(255,0,142,1) 50%, rgba(0,204,245,1) 100%);
 }
@@ -19,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px auto 20px auto;
+    margin: 10px auto;
     border-radius: 5px;
     flex-direction: column;
     padding: 20px 0px;
